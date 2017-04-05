@@ -1,0 +1,11 @@
+# vim: ts=2:sts=2:sw=2:expandtab:smarttab:
+
+pipeline:
+  publish-docker:
+    image: plugins/docker
+    tag:
+      - latest
+      - ${DRONE_TAG}
+    repo: ontrif/phantomjs-html2pdf
+    when:
+      event: tag
