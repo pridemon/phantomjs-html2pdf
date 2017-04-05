@@ -1,6 +1,7 @@
 # phantomjs-html2pdf
 ## Description
-This container is based on https://hub.docker.com/r/wernight/phantomjs/ version and adds to it `rasterize.js` script for converting html to pdf and `server` executable for providing http server for sending html to and receiving resulting pdf back.
+This is HTML to PDF converter microservice based on phantomjs and rasterize.js
+Container is based on https://hub.docker.com/r/wernight/phantomjs/ version and just adds `rasterize.js` script and `server` executable to it.
 
 ## Usage
 Simply start this container with command
