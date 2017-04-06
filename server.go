@@ -33,7 +33,7 @@ func pdfHandler(rw http.ResponseWriter, req *http.Request) {
     }
 
     // run phantomjs
-    cmd := exec.Command("phantomjs", "rasterize.js", tmpHtml, tmpPdf, size)
+    cmd := exec.Command("phantomjs", "--ssl-protocol=any", "--ignore-ssl-errors=true", "rasterize.js", tmpHtml, tmpPdf, size)
 
     var stderr, stdout bytes.Buffer
     cmd.Stderr = &stderr
